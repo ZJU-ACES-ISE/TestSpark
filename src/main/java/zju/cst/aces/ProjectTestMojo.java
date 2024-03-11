@@ -135,6 +135,7 @@ public class ProjectTestMojo
         MavenLogger mLogger = new MavenLogger(log);
         config = new Config.ConfigBuilder(new ProjectImpl(project))
                 .log(mLogger)
+                .pluginSign("TestSpark")
                 .classPaths(listClassPaths(project, dependencyGraphBuilder))
                 .promptPath(promptPath)
                 .examplePath(examplePath.toPath())
